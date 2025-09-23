@@ -4,10 +4,10 @@ namespace App\Controller;
 
 // principal, rota /
 
-class AppController extends AbstractController
+class PainelController extends AbstractController
 {
     public function index(array $requestData): void
     {
-        $this->render('login.php');
+        $this->render('painel.php');
     }
 }
