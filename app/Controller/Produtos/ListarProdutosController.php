@@ -9,6 +9,8 @@ class ListarProdutosController extends AbstractController
 {
     public function index(array $requestData): void
     {
+        $this->requireAuth();
+        
         $model = new Produto();
 
         $produtos = $model->listar();

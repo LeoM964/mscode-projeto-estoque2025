@@ -15,7 +15,9 @@ use App\Controller\PainelController;
 use App\Controller\Produtos\EditarProdutoController;
 use App\Controller\Produtos\ListarProdutosController;
 use App\Controller\Produtos\ShowEditarProdutoController;
-
+use App\Controller\Produtos\ShowCreateProdutoController;
+use App\Controller\Produtos\CriarProdutoController;
+use App\Controller\Produtos\DeleteProdutoController;
 
 $router = [
         'routes' => [
@@ -31,8 +33,11 @@ $router = [
         '/categories/save' => SaveController::class,
         '/produtos' => ListarProdutosController::class,
         '/produtos/editar' => ShowEditarProdutoController::class,
-        'produtos/editar/salvar' => EditarProdutoController::class,
-        
+        '/produtos/editar/salvar' => EditarProdutoController::class,
+        '/novo_produto' => ShowCreateProdutoController::class,
+        '/produtos/criar' => CriarProdutoController::class,
+        '/produtos/deletar' => DeleteProdutoController::class,
+
         
     ],
     'default' => NotFoundController::class

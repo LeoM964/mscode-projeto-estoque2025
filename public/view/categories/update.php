@@ -23,7 +23,7 @@
           </a>
 
           <ul class="nav nav-pills d-flex align-items-center">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Início</a></li>
+            <li class="nav-item"><a href="/tela-inicial" class="nav-link active" aria-current="page">Início</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Vendas
@@ -42,7 +42,7 @@
                 <li><a class="dropdown-item active" href="categorias.html">Categorias</a></li>
               </ul>
             </li>
-            <li class="nav-item"><a href="#" class="btn btn-outline-danger m-0 ms-4" aria-current="page">Sair</a></li>
+            <li class="nav-item"><a href="/logout" class="btn btn-outline-danger m-0 ms-4" aria-current="page">Sair</a></li>
           </ul>
         </header>
       </div>

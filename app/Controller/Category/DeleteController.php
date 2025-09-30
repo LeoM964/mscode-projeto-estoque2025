@@ -9,6 +9,8 @@ class DeleteController extends AbstractController
 {
     public function index(array $requestData): void
     {
+        $this->requireAuth();
+        
         if($_SERVER['REQUEST_METHOD'] !== 'POST'){
             $this->redirectToError('Método não permitido');
         }

@@ -41,10 +41,10 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/produtos">Estoque</a></li>
-                <li><a class="dropdown-item" href="categorias.html">Categorias</a></li>
+                <li><a class="dropdown-item" href="/categories/read">Categorias</a></li>
               </ul>
             </li>
-            <li class="nav-item"><a href="#" class="btn btn-outline-danger m-0 ms-4" aria-current="page">Sair</a></li>
+            <li class="nav-item"><a href="/logout" class="btn btn-outline-danger m-0 ms-4" aria-current="page">Sair</a></li>
           </ul>
         </header>
       </div>

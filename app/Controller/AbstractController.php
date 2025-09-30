@@ -21,5 +21,13 @@ abstract class AbstractController
         die();
     }
 
+    protected function requireAuth() : void {
+        session_start();
+        if (empty($_SESSION['usuario_logado'])){
+            header("Location: /");
+            die();
+        }
+    }
+
     abstract public function index(array $requestData): void;
 }

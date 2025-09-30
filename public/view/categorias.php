@@ -4,24 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MS Code - Projeto Estoque 2025</title>
+  <title>MS Code - Projeto Estoque 2024</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link href="/css/styles.css" rel="stylesheet">
+  <link href="/public/assets/css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-
-
-
   <main>
     <div class="border-bottom mb-2">
       <div class="container">
         <header class="d-flex flex-wrap justify-content-center align-items-center py-3">
           <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <img class="me-2" src="/images/logotipo.svg" width="53">
+            <img class="me-2" src="/public/assets/images/logotipo.svg" width="53">
             <span class="fs-4">MS Code - Estoque</span>
           </a>
 
@@ -57,7 +54,7 @@
       <div class="mb-4 d-flex flex-row justify-content-between">
         <h1>Categorias</h1>
         <div>
-          <a href="/categories/create" class="btn btn-primary"><i class="bi bi-plus"></i>Nova categoria</a>
+          <a href="nova_categoria.html" class="btn btn-primary"><i class="bi bi-plus"></i>Nova categoria</a>
         </div>
       </div>
 
@@ -66,58 +63,25 @@
           <tr>
             <th scope="col">Id</th>
             <th scope="col">Nome</th>
-            <th scope="col-1 text-align-right">Ações</th>
+            <th scope="col-1 text-align-right">Actions</th>
           </tr>
         </thead>
-
         <tbody>
-<?php if (!empty($data['categorias']) && count($data['categorias']) > 0): ?>
-    <?php foreach ($data['categorias'] as $categoria): ?>
-    <tr>
-        <th scope="row"><?= (int) $categoria['id'] ?></th>
-        <td><?= htmlspecialchars($categoria['nome'], ENT_QUOTES, 'UTF-8') ?></td>
-        <td class="col-1 text-align-right">
-            <!-- Editar -->
-            <a href="/categories/update?id=<?= (int)$categoria['id'] ?>"
-               class="btn btn-secondary btn-sm" title="Editar">
-                <i class="bi bi-pencil"></i>
-            </a>
-
-            <!-- Excluir -->
-            <form action="/categories/delete" method="post" style="display:inline"
-                  onsubmit="return confirm('Tem certeza que deseja excluir esta categoria?');">
-                <input type="hidden" name="id" value="<?= (int)$categoria['id'] ?>">
-                <button type="submit" class="btn btn-danger btn-sm" title="Excluir">
-                    <i class="bi bi-trash"></i>
-                </button>
-            </form>
-        </td>
-    </tr>
-    <?php endforeach; ?>
-<?php else: ?>
-    <tr>
-        <td colspan="3" class="text-center">Nenhuma categoria encontrada</td>
-    </tr>
-<?php endif; ?>
-</tbody>
-
-        <!-- <tbody>
-          
           <tr>
             <th scope="row">1</th>
             <td>Informática</td>
             <td class="col-1 text-align-right">
-              <button class="btn btn-secondary btn-sm" title="Editar"><i class="bi bi-pencil"></i></button>
-              <button class="btn btn-danger btn-sm" title="Excluir"><i class="bi bi-trash"></i></button>
+              <button class="btn btn-secondary btn-sm"><i class="bi bi-pencil"></i></button>
+              <button class="btn btn-danger btn-sm"><i class="bi bi-x"></i></button>
             </td>
           </tr>
-        </tbody> -->
+        </tbody>
 
       </table>
     </div>
   </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 </body>
 

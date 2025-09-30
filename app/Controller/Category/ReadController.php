@@ -10,6 +10,8 @@ class ReadController extends AbstractController {
 
     public function index(array $requestData): void
     {
+        $this->requireAuth();
+        
         $model = new Category();
         $categorias = $model->findAll();
 

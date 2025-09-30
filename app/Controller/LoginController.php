@@ -22,7 +22,7 @@ Class LoginController extends AbstractController
             $this->redirectToError('Usuário ou senha inválidos');
         }
 
-        $_SESSION['ususario_logado'] = 1;
+        $_SESSION['usuario_logado'] = 1;
         
         $this->redirect('/tela-inicial');
     }

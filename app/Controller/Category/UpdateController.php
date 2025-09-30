@@ -10,6 +10,7 @@ class UpdateController extends AbstractController
 {
     public function index(array $requestData): void
     {   
+        $this->requireAuth();
         // var_dump($_POST, $requestData);
         // die;
 
